@@ -119,6 +119,12 @@ address {
     padding: 30px;
 }
 
+@media screen and (max-width: 500px) {
+  .flex-row{
+   display: block;
+  }
+}
+
 .flex-row:before, .flex-row:after {
   content: "";
   display: table;
@@ -171,6 +177,7 @@ header {
   padding: 20px;
 }
 
+
 .logo{
   justify-content: flex-start;
   padding-left: 15px;
@@ -190,6 +197,12 @@ header {
   flex-grow: 1;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-search-box{
+    display: none;
+  }
 }
 
 .nav-search-form {
@@ -256,6 +269,12 @@ header {
 
 .navs{
   padding-right: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .navs{
+   display: none;
+  }
 }
 
 .nav-links{
@@ -333,6 +352,13 @@ header {
   position: relative;
 }
 
+@media screen and (max-width: 800px) {
+  .section-wrapper{
+    padding: 60px 10px;
+  }
+}
+
+
 .banner_bg .section-wrapper {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -361,9 +387,21 @@ header {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 800px) {
+  .hero-title{
+    font-size: 40px;
+  }
+}
+
 .hero-subtitle {
   color: #2f0238;
   font-weight: 300;
+}
+
+@media screen and (max-width: 800px) {
+  .hero-subtitle{
+    font-size: 20px;
+  }
 }
 
 .main-content{
@@ -403,6 +441,12 @@ header {
   border-radius: 15px;
   background-color: #bb95bb;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .deco-bar::after{
+    margin-top: 30px;
+  }
 }
 
 .widget-floated {
@@ -468,6 +512,20 @@ header {
   width: 100%;
 }
 
+@media screen and (max-width: 800px) {
+  .widget-floated .input-group-wrapper{
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tour-budget-banner .input-group-wrapper{
+    display: block;
+    margin: 10px 0;
+  }
+}
+
 .form-group {
   position: relative;
   margin-bottom: 20px;
@@ -480,6 +538,20 @@ header {
   flex: 1 1 20%;
   /* min-width: 20%;
   width: 100%; */
+}
+
+@media screen and (max-width: 800px) {
+  .widget-floated .tour-input-item{
+   padding: 0;
+   margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tour-budget-banner .tour-input-item{
+   padding: 0;
+   margin-bottom: 5px;
+  }
 }
 
 .tour-input-item.tour-price{
@@ -533,6 +605,13 @@ select.form-control {
   flex: 1 1 20%;
   padding-left: 20px;
   width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .tour-input-btn{
+    display: unset;
+    width: 80%;
+  }
 }
 
 .btn, a.btn{
@@ -607,9 +686,28 @@ a.btn.btn-default:focus {
   top: 35%;
 }
 
+@media screen and (max-width: 800px) {
+  .date-icon{
+    left: 96%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .date-icon{
+    left: 91%;
+  }
+}
+
+
 .widget-floated + .section-header {
   margin-top: 100px;
   padding-bottom: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .widget-floated + .section-header{
+    margin-top: 300px;
+  }
 }
 
 .section-header {
@@ -619,6 +717,13 @@ a.btn.btn-default:focus {
 .section-title  {
   font-size: 50px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .section-title{
+    font-size: 30px;
+    /* font-weight: 400; */
+  }
 }
 
 .content-inner {
@@ -636,18 +741,32 @@ a.btn.btn-default:focus {
 .card-list {
   position: relative;
   padding: 20px 0;
-  display: flex;
-  flex-flow: row wrap;
-  margin-left: -.1em;
-  margin-right: -.625em;
-  max-width: 100%;
-  flex-basis: 100%;
+  /* display: flex;
+  flex-flow: row wrap; */
+  /* margin-left: -.1em;
+  margin-right: -.625em; */
+  /* max-width: 100%;
+  flex-basis: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    .card-list{
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .card-list{
+    display: block;  
+  }
 }
 
 .tour-card {
   display: flex;
   flex: 0 0 20%;
-  max-width: 23%;
+  /* max-width: 2%; */
   margin: 20px 12px;
   padding: 20px;
   background-color: white;
@@ -850,6 +969,13 @@ footer a{
   margin: 15px 0;
 }
 
+@media screen and (max-width: 500px) {
+  .foot-block{
+   /* display: block; */
+   margin-bottom: 50px;
+  }
+}
+
 .foot-block .wrapper {
     width: 100%;
     display: block;
@@ -862,6 +988,24 @@ footer a{
 
 .brand-image .logo-name{
   font-size: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .logo{
+   padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .foot-block .logo-name{
+   font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .foot-block .logo-name{
+   font-size: 35px;
+  }
 }
 
 .logo-link {
