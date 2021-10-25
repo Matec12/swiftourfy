@@ -185,11 +185,17 @@ header {
 
 .logo-name{
   position: relative;
-  bottom: 50%;
+  bottom: 10px;
   font-weight: 700;
   font-size: 25px;
   color: #fff;
 }
+
+/* @media screen and (max-width: 800px) {
+  .navbar-container .logo-name{
+    bottom: 10px;
+  }
+} */
 
 .nav-search-box {
   position: relative;
@@ -199,19 +205,39 @@ header {
   padding-right: 30px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .nav-search-box{
     display: none;
   }
 }
 
 .nav-search-form {
-  display: block;
+  background-color: #2e0d20;
+  width: 100%;
+  /* height: 60px; */
+  padding: 8px 10px;
+  z-index: 1;
   visibility: visible;
-  transform: none;
-  background: transparent;
-  position: relative;
-  bottom: 3px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
+}
+
+.show_earch .navbar-search-form {
+  transform: scaleY(1);
+  visibility: visible;
+  transition: transform 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-search-form {
+    display: block;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    position: relative;
+    bottom: 8px;
+  }
 }
 
 .nav-search-input {
@@ -239,7 +265,7 @@ header {
   margin-top: -10px;
   border-radius: 0;
   position: absolute;
-  top: 50%;
+  top: 35%;
   right: auto;
   bottom: auto;
   left: auto;
@@ -248,6 +274,18 @@ header {
 
 .nav-search-submit {
   left: 13px;
+}
+
+.nav-search-reset {
+  right: 13px;
+  /* opacity: 0; */
+  visibility: visible;
+  transition: all 0.4s ease;
+}
+
+.has_value .nav-search-reset {
+  opacity: 1;
+  visibility: visible;
 }
 
 .icon-xs {
@@ -267,15 +305,52 @@ header {
     background-position: center;
 }
 
-.navs{
+/* .navs{
   padding-right: 50px;
+} */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .navbar-group-right{
+    margin-right: 30px;
+  }
 }
 
-@media screen and (max-width: 800px) {
+.navs{
+  background-color: #2e0d20;
+  height: 100%;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  /* Tablets and phablets */
+}
+
+.is-active .navs{
+  transform: scaleY(1);
+  visibility: visible;
+  transition: transform 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .navs{
+    background-color: transparent;
+    position: static;
+    visibility: visible;
+    -moz-transform: scaleY(1);
+    transform: scaleY(1);
+    /* line-height: 60px; */
+  }
+}
+
+/* @media screen and (max-width: 800px) {
   .navs{
    display: none;
   }
-}
+} */
 
 .nav-links{
   display: inline;
@@ -292,6 +367,116 @@ header {
   font-size: 14.1px;
   /* transform: scale(5); */
   transition: ease-out 0.5s;
+}
+
+.navbar-consts {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-consts{
+    visibility: hidden;
+  }
+}
+
+
+
+.control-btns {
+  margin-left: 20px;
+  position: relative;
+}
+
+.control-btns > a {
+  display: block;
+}
+
+.control-btns-two {
+  margin-left: 40px;
+  position: relative;
+}
+
+.control-btns-two > a {
+  display: block;
+}
+
+.control-btns-two .cust-icon {
+  width: 25px;
+  height: 25px;
+  /* Mobile devices */
+}
+@media only screen and (max-width: 575px) {
+  .control-btns-two .cust-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.btn-search-trigger {
+  /* fill: #bc8a39; */
+  /* Landscape tablets and desktop or laptops */
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 451, ../sass/partials/_header_nav.scss */
+  .btn-search-trigger {
+    display: block;
+    visibility: visible;
+    left: 90%;
+    bottom: 20px;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+}
+
+.primary-nav-trigger {
+  position: relative;
+}
+
+.menu-icon {
+  /* this span is the central line of the menu icon */
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+  transition: background-color 0.3s;
+  /* these are the upper and lower lines in the menu icon */
+}
+
+.menu-icon::before, .menu-icon:after {
+  content: '';
+  width: 24px;
+  height: 3px;
+  position: absolute;
+  background-color: #fff;
+  /* right: 0; */
+  transition: transform 0.3s, top 0.3s, background-color 0s;
+}
+
+.menu-icon::before {
+  top: -7px;
+}
+
+.menu-icon::after {
+  top: 7px;
+}
+
+.menu-icon.is-clicked {
+  background-color: rgba(188, 138, 57, 0);
+}
+
+.menu-icon.is-clicked::before, .menu-icon.is-clicked::after {
+  background-color: #bc8a39;
+}
+
+.menu-icon.is-clicked::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.menu-icon.is-clicked::after {
+  top: 0;
+  transform: rotate(225deg);
 }
 
 .hero-area {
