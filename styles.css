@@ -223,7 +223,7 @@ header {
   transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
 }
 
-.show_earch .navbar-search-form {
+.show_earch .nav-search-form {
   transform: scaleY(1);
   visibility: visible;
   transition: transform 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
@@ -265,7 +265,7 @@ header {
   margin-top: -10px;
   border-radius: 0;
   position: absolute;
-  top: 35%;
+  top: 50%;
   right: auto;
   bottom: auto;
   left: auto;
@@ -318,7 +318,7 @@ header {
 .navs{
   background-color: #2e0d20;
   height: 100%;
-  visibility: hidden;
+  visibility: visible;
   transform: scaleY(0);
   transform-origin: top;
   transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
@@ -331,7 +331,7 @@ header {
 
 .is-active .navs{
   transform: scaleY(1);
-  visibility: visible;
+  visibility: hidden;
   transition: transform 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
 }
 
@@ -351,6 +351,23 @@ header {
    display: none;
   }
 } */
+
+/* .nav-menu {
+  display: flex; */
+  /* align-items: center; */
+  /* height: 100%; */
+  /* Tablets and phablets */
+/* } */
+
+@media only screen and (max-width: 767px) {
+  /* line 117, ../sass/partials/_header_nav.scss */
+  .nav-menu{
+    display: flex;
+    /* align-items: center; */
+    height: 100%;
+    flex-direction: column;
+  }
+}
 
 .nav-links{
   display: inline;
@@ -380,8 +397,6 @@ header {
     visibility: hidden;
   }
 }
-
-
 
 .control-btns {
   margin-left: 20px;
