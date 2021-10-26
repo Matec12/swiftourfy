@@ -684,12 +684,22 @@ header {
   /* background-repeat: no-repeat; */
 }
 
+.main-hero-3{
+  background-image: url(../img/banners/hero3.jpg);
+  /* background-repeat: no-repeat; */
+}
+
 .main-hero::before {
   opacity: .7;
   background-color: #ffffffa3;
 }
 
 .main-hero-2::before {
+  opacity: .7;
+  background-color: #ffffffa3;
+}
+
+.main-hero-3::before {
   opacity: .7;
   background-color: #ffffffa3;
 }
@@ -1283,6 +1293,12 @@ a.btn.btn-default:focus {
     .card-list{
       grid-template-columns: 1fr 1fr;
     }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1100px){
+  .card-list{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 500px) {
