@@ -177,6 +177,10 @@ address {
   font-weight: 700 !important;
 }
 
+.font-bold {
+  font-weight: 700 !important;
+}
+
 strong {
     font-weight: 700;
 }
@@ -224,6 +228,19 @@ strong {
 
 .flex_row:after {
   clear: both;
+}
+
+.form-horizontal {
+  display: flex;
+}
+
+.form-horizontal .control-label {
+  margin-bottom: 8px;
+}
+
+.col-sm-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
 }
 
 button {
