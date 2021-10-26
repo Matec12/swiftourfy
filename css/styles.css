@@ -230,7 +230,7 @@ strong {
   clear: both;
 }
 
-.form-horizontal {
+/* .form-horizontal {
   display: flex;
 }
 
@@ -241,7 +241,7 @@ strong {
 .col-sm-4 {
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
-}
+} */
 
 button {
   outline: 0;
