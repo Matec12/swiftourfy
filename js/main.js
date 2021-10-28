@@ -177,48 +177,4 @@ jQuery(document).ready(function($) {
       }
   });
 
-  var subNav = $(".sticky_nav"),
-      navScrolled = "fix__top",
-      scroll_offset_top = 500; 
-
-  $(window).scroll(function() {
-      if($(this).scrollTop() > scroll_offset_top) {
-          subNav.addClass(navScrolled);
-      } else {
-          subNav.removeClass(navScrolled);
-      }
-  });
-
-   /*Custom Selector*/
-  var selector_input = $(".cst_selector"),
-      target_container = $('.cst_select_list');
-      
-
-  selector_input.on('click', function() {
-      if ($(this).attr("checked"), true) {
-          // $(this).parents(".select_radio").find(".select_item").removeClass('selected');
-          $(this).parents(".select_item").addClass("selected");
-      } else if ($(this).attr("checked"), false) {
-          // $(this).parents(".select_radio").find(".selected").removeClass('selected');
-          $(this).parents(".selected").removeClass("selected");
-      } else  {
-          $(this).parents(".selected").removeClass('selected');
-      }
-  });
-
-  // selector_input.on('click', function() {
-  //     if ($(this).attr("checked"), false) {
-  //         $(this).parents(".select_radio").find(".select_item").removeClass('selected');
-  //         $(this).parents(".select_item").addClass("selected");
-  //     } else  {
-  //         $(this).parents(".select_item").removeClass('selected');
-  //     }
-  // });
-
-   /*checkbox select only one in a group */
-   $('input[type="checkbox"]').on('change', function() {
-      $('input[name="' + this.name + '"]').not(this).prop('checked', false);
-  });
-
-
 });

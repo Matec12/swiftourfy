@@ -1438,7 +1438,7 @@ a.btn.btn-default:focus {
   display: flex;
   box-flex: 0;
   position: relative;
-  top: 22px;
+  top: 2px;
   flex: 0 0 30px;
 }
 
